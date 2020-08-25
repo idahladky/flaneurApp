@@ -55,49 +55,17 @@ $(() => {
         }
     ]
 
+    // hardcoded for NYC
+    $.ajax({
+        // available parameters: minutely, hourly, daily, current. include *exclusions* in url
+        url: `https://api.openweathermap.org/data/2.5/onecall?lat=40.730610&lon=-73.935242&exclude=minutely,hourly&appid=86a56fb3135c86a87770953eed0010c4`
+    }).then(
+        (data) => {
+            console.log(data)
+        },
+        () => {
+            console.log("bad request")
+        }
+    )
+
 })
-
-
-
-
-
-
-// the code I will use when I can use both API's
-// --------------------------
-// get string value from input
-
-// $("form").on("submit", (event) => {
-//     event.preventDefault()
-
-//     let locationSearch = $("input").val()
-
-
-    // pass value into geolocation api to get longitute and latitude values
-
-    // $.ajax({
-    //     url: 
-    // }).then(
-    //     (data) => {
-    //         console.log(data)
-    //     },
-    //     () => {
-    //         console.log("bad request")
-    //     }
-
-    // save longitude and latitude values into variables
-    // let longitude = 0
-    // let latitude = 0
-
-    // pass above variables into weather api call
-
-    // $.ajax({
-    //     url: 
-    // }).then(
-    //     (data) => {
-    //         console.log(data)
-    //     },
-    //     () => {
-    //         console.log("bad request")
-    //     }
-    // )
-// })
