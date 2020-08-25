@@ -10,6 +10,16 @@ I want to build an app/site where photographers can enter their location and get
 
 Step 1 - GA Project 1 portion
 
-• design home page - nav?, clickable boxes (one each for weather, maps, city calendar, comments. only the wweather button will be connected)
+• design home page - clickable boxes (one each for weather, maps, city calendar, comments. only the wweather button will be connected)
 • create search bar that takes entered location, connects to weather api
 • when the weather button is clicked, it is a modal that "fills" the screen and shows a window of the local weather
+
+--specifics--
+search button takes value and converts to longitude and latitude
+	- geolocation api?
+latitude and longitude values are stored in variables and passed into weather api
+optional parameters:	current
+						mintutely
+						hourly
+						daily
+to make "historical weather data" call, make 5 api calls, one for each previous day
