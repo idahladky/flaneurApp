@@ -109,7 +109,18 @@ $(() => {
     $("#weather").on("click", () => {
         $("#weather-modal").css("display", "block")
     })
-    // code for the rest of the buttons
+
+    $("#map").on("click", () => {
+        $("#map-modal").css("display", "block")
+    })
+  
+    $("#events").on("click", () => {
+        $("#events-modal").css("display", "block")
+    })
+
+    $("#comments").on("click", () => {
+        $("#comments-modal").css("display", "block")
+    })
 
     // close modals
     $(".close-button").on("click", () => {
