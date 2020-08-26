@@ -69,7 +69,35 @@ $(() => {
         }).then(
             (data) => {
                 console.log(data)
-                console.log("current temp: " + data.current.temp)
+                $(".city-name").html(city.name)
+                // round current temp for whole number
+                const currentTemp = Math.round(data.current.temp)
+                $("#current-temp").html(`${currentTemp}º`)
+                $("#weather-description").html(data.current.weather[0].main)
+                $("#humidity").html(`${data.current.humidity}%`)
+                // to convert unix timestamp to time - tutorial found here: https://www.geeksforgeeks.org/how-to-convert-unix-timestamp-to-time-in-javascript/
+                const currentSunrise = () => {
+                    const unixTimestamp = (data.current.sunrise)
+                    const sunriseObj = new Date(unixTimestamp * 1000)
+                    const hours = sunriseObj.getUTCHours()
+                    const minutes = sunriseObj.getUTCMinutes()
+                    const getSunrise = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`
+                    // convert UTC to local time
+                    // const getLocalSunrise = getSunrise.getTimezoneOffset()
+                    $("#sunrise").html(`${getSunrise} AM`)
+                }
+                currentSunrise()
+                const currentSunset = () => {
+                    const unixTimestamp = data.current.sunset
+                    const sunsetObj = new Date(unixTimestamp * 1000)
+                    const hours = sunsetObj.getUTCHours()
+                    const minutes = sunsetObj.getUTCMinutes()
+                    // 
+                    const getSunset = `${hours.toString().padStart(2,"0")}:${minutes.toString().padStart(2, "0")}`
+                    // 
+                    $("#sunset").html(`${getSunset} PM`)
+                }
+                currentSunset()
             },
             () => {
                 console.log("bad request")
