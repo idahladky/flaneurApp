@@ -13,12 +13,33 @@
 </head>
 <body>
     
+    <header>
+        <img>
+    </header>
+
     <form>
-        <input type="text" id="search" placeholder="Search" />
-        <input type="submit" value="Search" />
+        <label>Cities</label>
+        <select id="cityList">
+            <option value="New York, NY">New York City</option>
+            <option value="Los Angeles, CA">Los Angeles</option>
+            <option value="Chicago, IL">Chicago</option>
+            <option value="Houston, TX">Houston</option>
+            <option value="Phoenix, AZ">Phoenix</option>
+            <option value="Philadelphia, PA">Philadelphia</option>
+            <option value="Denver, COr">Denver</option>
+            <option value="Boston, MA">Boston</option>
+            <option value="Nashville, TN">Nashville</option>
+            <option value="Seattle, WA">Seattle</option>
+        </select>
+        <button type="submit">Explore!</button>
     </form>
 
-    <div id="weather"></div>
+    <div class="container">
+        <button id="weather">Weather</button>
+        <button id="map">Map</button>
+        <button id="events">Local Events</button>
+        <button id="comments">Comments</button>
+    </div>
 
 </body>
 </html>
