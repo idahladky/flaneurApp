@@ -105,6 +105,14 @@ $(() => {
         )
     })
 
-    // open and close modal
+    // open modals
+    $("#weather").on("click", () => {
+        $("#weather-modal").css("display", "block")
+    })
+    // code for the rest of the buttons
 
+    // close modals
+    $(".close-button").on("click", () => {
+        $(".modals").css("display", "none")
+    })
 })
