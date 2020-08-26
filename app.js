@@ -71,8 +71,7 @@ $(() => {
                 console.log(data)
                 $(".city-name").html(city.name)
                 // round current temp for whole number
-                const currentTemp = Math.round(data.current.temp)
-                $("#current-temp").html(`${currentTemp}º`)
+                $("#current-temp").html(`${Math.round(data.current.temp)}º`)
                 $("#weather-description").html(data.current.weather[0].main)
                 $("#humidity").html(`${data.current.humidity}%`)
                 // to convert unix timestamp to time - tutorial found here: https://www.geeksforgeeks.org/how-to-convert-unix-timestamp-to-time-in-javascript/
@@ -84,6 +83,7 @@ $(() => {
                     const getSunrise = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`
                     // convert UTC to local time
                     // const getLocalSunrise = getSunrise.getTimezoneOffset()
+                    // convert local time to standard time
                     $("#sunrise").html(`${getSunrise} AM`)
                 }
                 currentSunrise()
@@ -92,9 +92,9 @@ $(() => {
                     const sunsetObj = new Date(unixTimestamp * 1000)
                     const hours = sunsetObj.getUTCHours()
                     const minutes = sunsetObj.getUTCMinutes()
-                    // 
                     const getSunset = `${hours.toString().padStart(2,"0")}:${minutes.toString().padStart(2, "0")}`
-                    // 
+                    // convert UTC to local time
+                    // convert local time to standard time
                     $("#sunset").html(`${getSunset} PM`)
                 }
                 currentSunset()
@@ -105,5 +105,6 @@ $(() => {
         )
     })
 
-    // populate weather button/modal with userChoice results
+    // open and close modal
+
 })
