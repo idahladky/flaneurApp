@@ -12,83 +12,88 @@
     <script src="app.js"></script>
 </head>
 <body>
+    <main>
     
-    <header>
-        <img>
-    </header>
+        <header>
+            <div>image</div>
+        </header>
 
-    <!-- dropdown menu -->
-    <form>
-        <label>Cities</label>
-        <select id="cityList">
-            <option value="New York, NY">New York City</option>
-            <option value="Los Angeles, CA">Los Angeles</option>
-            <option value="Chicago, IL">Chicago</option>
-            <option value="Houston, TX">Houston</option>
-            <option value="Phoenix, AZ">Phoenix</option>
-            <option value="Philadelphia, PA">Philadelphia</option>
-            <option value="Denver, CO">Denver</option>
-            <option value="Boston, MA">Boston</option>
-            <option value="Nashville, TN">Nashville</option>
-            <option value="Seattle, WA">Seattle</option>
-        </select>
-        <button type="submit">Explore!</button>
-    </form>
+        <!-- dropdown menu -->
+        <form>
+            <label>Cities</label>
+            <select id="cityList">
+                <option value="New York, NY">New York City</option>
+                <option value="Los Angeles, CA">Los Angeles</option>
+                <option value="Chicago, IL">Chicago</option>
+                <option value="Houston, TX">Houston</option>
+                <option value="Phoenix, AZ">Phoenix</option>
+                <option value="Philadelphia, PA">Philadelphia</option>
+                <option value="Denver, CO">Denver</option>
+                <option value="Boston, MA">Boston</option>
+                <option value="Nashville, TN">Nashville</option>
+                <option value="Seattle, WA">Seattle</option>
+            </select>
+            <button type="submit">Explore!</button>
+        </form>
 
-    <div class="container">
+        <div class="container">
+            <div class="row">
 
-        <!-- weather button -->
-        <button id="weather">Weather</button>
-        <div class="modals" id="weather-modal">
-            <button class="close-button"></button> 
-            <div id="weather-modal-textbox">
-                <h2 class="city-name">City Name</h2>
-                <h4 id="weather-description"></h4>
-                <h3 id="current-temp"></h3>
-                <table>
-                    <tr>
-                        <td>Humidity</td>
-                        <td id="humidity"></td>
-                    </tr>
-                    <tr>
-                        <td>Sunrise</td>
-                        <td id="sunrise"></td>
-                    </tr>
-                    <tr>
-                        <td>Sunset</td>
-                        <td id="sunset"></td>
-                    </tr>
-                </table>
+                <!-- weather button -->
+                <button class="modal-buttons" id="weather">Weather</button>
+                <div class="modals" id="weather-modal">
+                    <button class="close-button"></button> 
+                    <div id="weather-modal-textbox">
+                        <h2 class="city-name"></h2>
+                        <h4 id="weather-description"></h4>
+                        <h3 id="current-temp"></h3>
+                        <table>
+                            <tr>
+                                <td>Humidity</td>
+                                <td id="humidity"></td>
+                            </tr>
+                            <tr>
+                                <td>Sunrise</td>
+                                <td id="sunrise"></td>
+                            </tr>
+                            <tr>
+                                <td>Sunset</td>
+                                <td id="sunset"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- map button -->
+                <button class="modal-buttons" id="map">Map</button>
+                <div class="modals" id="map-modal">
+                    <button class="close-button"></button> 
+                    <div id="map-modal-textbox">
+                        <h2>Coming Soon!</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- local event button -->
+                <button class="modal-buttons" id="events">Local Events</button>
+                <div class="modals" id="events-modal">
+                    <button class="close-button"></button> 
+                    <div id="events-modal-textbox">
+                        <h2>Coming Soon!</h2>
+                    </div>
+                </div>
+
+                <!-- comments button -->
+                <button class="modal-buttons" id="comments">Comments</button>
+                <div class="modals" id="comments-modal">
+                    <button class="close-button"></button> 
+                    <div id="comments-modal-textbox">
+                        <h2>Coming Soon!</h2>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- map button -->
-        <button id="map">Map</button>
-        <div class="modals" id="map-modal">
-            <button class="close-button"></button> 
-            <div id="map-modal-textbox">
-                <h2>Coming Soon!</h2>
-            </div>
-        </div>
-
-        <!-- local event button -->
-        <button id="events">Local Events</button>
-        <div class="modals" id="events-modal">
-            <button class="close-button"></button> 
-            <div id="events-modal-textbox">
-                <h2>Coming Soon!</h2>
-            </div>
-        </div>
-
-        <!-- comments button -->
-        <button id="comments">Comments</button>
-        <div class="modals" id="comments-modal">
-            <button class="close-button"></button> 
-            <div id="comments-modal-textbox">
-                <h2>Coming Soon!</h2>
-            </div>
-        </div>
-    </div>
-
+    </main>
 </body>
 </html>

@@ -63,7 +63,7 @@ $(() => {
         console.log(city)
 
         $.ajax({
-            // units=imperial is for Kelvin temp
+            // units=imperial is for Fahrenheit temp
             // available parameters: minutely, hourly, daily, current. include *exclusions* in url
             url: `https://api.openweathermap.org/data/2.5/onecall?lat=${city.latitude}&lon=${city.longitude}2&units=imperial&exclude=minutely,hourly,daily&appid=86a56fb3135c86a87770953eed0010c4`
         }).then(
@@ -94,7 +94,7 @@ $(() => {
                     const minutes = sunsetObj.getUTCMinutes()
                     const getSunset = `${hours.toString().padStart(2,"0")}:${minutes.toString().padStart(2, "0")}`
                     // convert UTC to local time
-                    // convert local time to standard time
+                    // convert local time to standard 12-hr time
                     $("#sunset").html(`${getSunset} PM`)
                 }
                 currentSunset()

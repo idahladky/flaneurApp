@@ -1,8 +1,25 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 24px;
+}
+
+main {
+    width: 25em;
+    height: 37.5em;
+    text-align: center;
+    border: black 1px solid;
+    margin: auto;
+}
+
+header {
+    height: 15vh;
+    background-color: gray;
+}
+
+form {
+    background-color: peachpuff;
+    
 }
 
 .close-button {
