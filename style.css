@@ -13,13 +13,43 @@ main {
 }
 
 header {
-    height: 15vh;
+    height: 17vh;
     background-color: gray;
 }
 
 form {
     background-color: peachpuff;
-    
+    padding: 3em 0;
+}
+
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: black solid 1px;
+    font-size: 1.15em;
+    padding: .12em .25em .15em;
+}
+
+select {
+    padding: .3em;
+}
+
+.container {
+    height: 60%;
+}
+
+.row {
+    height: 50%;
+    background-color: mintcream;
+}
+
+#explore-button {
+    padding: .28em;
+    font: 1.1em;
+}
+
+.modal-buttons {
+    height: 10em;
+    width: 10em;
 }
 
 .close-button {
