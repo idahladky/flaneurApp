@@ -1,72 +1,98 @@
 * {
-    padding: 0;
     box-sizing: border-box;
     font-size: 24px;
     margin: 0;
+    max-height: 1366px;
+    max-width: 1024px;
+    padding: 0;
 }
 
 main {
-    text-align: center;
     margin: auto;
+    text-align: center;
 }
 
-header {
-    height: 15vh;
-    background-color: gray;
+.hero {
+    background-image: url("../project_1/images/2020_0821_19250000.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+}
+
+h1 {
+    font-size: 15vw;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: mintcream;
+    text-shadow: -7px -7px 3px rgb(46, 46, 46);
 }
 
 form {
-    background-color: peachpuff;
-    height: 10vh;
-    display: flex;
     align-items: center;
+    background-color: rgba(0,0,0,.35);
+    border: 1px solid #fff;
+    display: flex;
     justify-content: space-evenly;
-    padding: 1em;
+    padding: .5em;
+    margin: auto;
+    max-width: 500px;
 }
 
 label {
+    color: mintcream;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: black solid 1px;
-    font-size: .75em;
+    font-size: 2.25vw;
     padding: .12em .25em .15em;
 }
 
 select {
+    background-color: mintcream;
+    font-size: 2vw;
     padding: .28em;
-    font-size: .75em;
 }
 
 #selection-button {
+    background-color: mintcream;
+    font-size: 2vw;
     padding: .24em;
-    font-size: .75em;
 }
+
 .container {
+    background-image: url("..//project_1/images/DSCF1376.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     height: 75vh;
-    background-color: mintcream;
-
+    justify-content: space-evenly;
+    opacity: 50%;
 }
+
 .row {
-    justify-content: space-between;
+    align-items: center;
     display: flex;
+    height: 50%;
     justify-content: space-evenly;
 }
 
 .modal-buttons {
-    height: 8.5em;
-    width: 5.75em;
+    height: 80%;
+    width: 40%;
+    padding-bottom: 25%;
+    font-size: 4vw;
 }
 
-.close-button {
-    background-color: white;
-    width: 1em;
-    border: none;
-    float: right;
-    margin: 1em;
-    font-family: Arial, Helvetica, sans-serif;
+#weather {
+    background-image: url("../project_1/images/2020_0821_19242700.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
 }
+
+
+/* modals */
 
 #weather-modal, #map-modal, #events-modal, #comments-modal {
     display: none;
@@ -84,6 +110,14 @@ select {
     display: none;
     border: black 1px solid;
     background-color: rgba(255, 255, 255, .5);
+}
+.close-button {
+    background-color: white;
+    width: 1em;
+    border: none;
+    float: right;
+    margin: 1em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .textbox {
@@ -115,7 +149,3 @@ h4 {
     text-align: left;
     padding: .5em;
 }
-
-/* table {
-    margin: auto;
-} */
