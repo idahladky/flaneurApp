@@ -38,7 +38,7 @@ h1 {
     align-items: center;
     justify-content: center;
     color: mintcream;
-    text-shadow: -7px -7px 3px rgb(46, 46, 46);
+    text-shadow: -.75vw -.75vw 3px rgb(46, 46, 46);
 }
 
 form {
@@ -96,7 +96,7 @@ select {
     font-size: 4.75vw;
     color: #fff;
     font-weight: bold;
-    text-shadow: 3px 3px 3px rgb(46, 46, 46);
+    text-shadow: .4vw .4vw 3px rgb(46, 46, 46);
     border: 1px solid gray;
     box-shadow: rgb(109, 108, 108);
 }
@@ -171,12 +171,17 @@ select {
 }
 
 .close-button {
-    background-color: white;
     width: 1em;
     border: none;
     float: right;
     margin: 1em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    font-size: 5vw;
+}
+
+#map-modal>.close-button, #events-modal>.close-button {
+    color: #fff;
 }
 
 .textbox {
@@ -191,7 +196,7 @@ h2, h3 {
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 3.75vw;
 }
 
 .table {
@@ -207,4 +212,5 @@ h4 {
     display: table-cell;
     text-align: left;
     padding: .5em;
+    font-size: 4.5vw;
 }
