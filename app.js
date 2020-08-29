@@ -93,6 +93,7 @@ $(() => {
                     const hours = sunsetObj.getUTCHours()
                     const minutes = sunsetObj.getUTCMinutes()
                     const getSunset = `${hours.toString().padStart(2,"0")}:${minutes.toString().padStart(2, "0")}`
+                    console.log("THIS IS THE SUNSET TIME " + getSunset)
                     // convert UTC to local time
                     // convert local time to standard 12-hr time
                     $("#sunset").html(`${getSunset} PM`)
@@ -107,23 +108,23 @@ $(() => {
 
     // open modals
     $("#weather").on("click", () => {
-        $("#weather-modal").css("display", "block")
+        $("#weather-modal, .blur").css("display", "block")
     })
 
     $("#map").on("click", () => {
-        $("#map-modal").css("display", "block")
+        $("#map-modal, .blur").css("display", "block")
     })
   
     $("#events").on("click", () => {
-        $("#events-modal").css("display", "block")
+        $("#events-modal, .blur").css("display", "block")
     })
 
     $("#comments").on("click", () => {
-        $("#comments-modal").css("display", "block")
+        $("#comments-modal, .blur").css("display", "block")
     })
 
     // close modals
     $(".close-button").on("click", () => {
-        $(".modals").css("display", "none")
+        $(".modals, .blur").css("display", "none")
     })
 })

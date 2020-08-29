@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PhotographerApp</title>
+    <title>flâneur</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -12,60 +12,62 @@
     <script src="app.js"></script>
 </head>
 <body>
+    
+    <!-- MODALS -->
+
+    <!-- weather modal -->
+    <div class="modals" id="weather-modal">
+        <button class="close-button">x</button> 
+        <div class="textbox" id="weather-modal-textbox">
+            <h2 class="city-name"></h2>
+            <h4 id="weather-description"></h4>
+            <h3 id="current-temp"></h3>
+            <section class="table">
+                <div class="table-row">
+                    <div class="table-cell">Humidity</div>
+                    <div class="table-cell" id="humidity"></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Sunrise</div>
+                    <div class="table-cell" id="sunrise"></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Sunset</div>
+                    <div class="table-cell" id="sunset"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- map modal -->
+    <div class="modals" id="map-modal">
+        <button class="close-button">x</button> 
+        <div class="textbox" id="map-modal-textbox">
+            <h2>Coming Soon!</h2>
+        </div>
+    </div>
+
+    <!-- events modal -->
+    <div class="modals" id="events-modal">
+        <button class="close-button">x</button> 
+        <div class="textbox" id="events-modal-textbox">
+            <h2>Coming Soon!</h2>
+        </div>
+    </div>
+
+    <!-- comments modal -->
+    <div class="modals" id="comments-modal">
+        <button class="close-button">x</button> 
+        <div class="textbox" id="comments-modal-textbox">
+            <h2>Coming Soon!</h2>
+        </div>
+    </div>
+
+    <!-- MAIN PAGE -->
     <main>
-        <!-- MODALS -->
-
-        <!-- weather modal -->
-        <div class="modals" id="weather-modal">
-            <button class="close-button">x</button> 
-            <div class="textbox" id="weather-modal-textbox">
-                <h2 class="city-name"></h2>
-                <h4 id="weather-description"></h4>
-                <h3 id="current-temp"></h3>
-                <section class="table">
-                    <div class="table-row">
-                        <div class="table-cell">Humidity</div>
-                        <div class="table-cell" id="humidity"></div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Sunrise</div>
-                        <div class="table-cell" id="sunrise"></div>
-                    </div>
-                    <div class="table-row">
-                        <div class="table-cell">Sunset</div>
-                        <div class="table-cell" id="sunset"></div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <!-- map modal -->
-        <div class="modals" id="map-modal">
-            <button class="close-button">x</button> 
-            <div class="textbox" id="map-modal-textbox">
-                <h2>Coming Soon!</h2>
-            </div>
-        </div>
-
-        <!-- events modal -->
-        <div class="modals" id="events-modal">
-            <button class="close-button">x</button> 
-            <div class="textbox" id="events-modal-textbox">
-                <h2>Coming Soon!</h2>
-            </div>
-        </div>
-
-        <!-- comments modal -->
-        <div class="modals" id="comments-modal">
-            <button class="close-button">x</button> 
-            <div class="textbox" id="comments-modal-textbox">
-                <h2>Coming Soon!</h2>
-            </div>
-        </div>
-
-        <!-- top of page -->
+        <div class="blur"></div>
         <div class="hero">
-             <h1>flaneur</h1>
+             <h1>flâneur</h1>
         
             <!-- dropdown menu -->
             <form>
@@ -83,7 +85,7 @@
                     <option value="Nashville, TN">Nashville</option>
                     <option value="Seattle, WA">Seattle</option>
                 </select>
-                <button type="submit" id="selection-button">Explore!</button>
+                <button type="submit" id="selection-button">EXPLORE!</button>
             </form>
         </div>
 
